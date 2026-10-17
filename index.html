@@ -1,6 +1,12 @@
-<title>3Fluxe Shop</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="3Fluxe: handmade wigs, caps, accessories and upcycled fashion, made in Limerick from pre-loved Irish charity shop fabric, finished with African Ankara print.">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100F0C">
+<title>3Fluxe — Fashion with feeling</title>
+
+<meta name="description" content="Fashion with feeling. Discover handmade wigs, caps, accessories and upcycled fashion from Limerick, Ireland. Pre-loved fabric, African Ankara print, and a story in every stitch.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap">
@@ -20,7 +26,7 @@
   --font-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-hand:"Caveat", "Segoe Print", "Bradley Hand", cursive;
   --stitch:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 18px);
-  --ankara:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%233A1730'/%3E%3Cpath d='M0 0h12L0 12zM48 0v12L36 0zM0 48V36l12 12zM48 48H36l12-12z' fill='%230F8B8D'/%3E%3Ccircle cx='24' cy='24' r='16' fill='%23E0218A'/%3E%3Ccircle cx='24' cy='24' r='11' fill='%23F5B21B'/%3E%3Ccircle cx='24' cy='24' r='6' fill='%233A1730'/%3E%3Ccircle cx='24' cy='24' r='2.2' fill='%23FFF'/%3E%3Ccircle cx='0' cy='24' r='3' fill='%23F5B21B'/%3E%3Ccircle cx='48' cy='24' r='3' fill='%23F5B21B'/%3E%3Ccircle cx='24' cy='0' r='3' fill='%23FFF'/%3E%3Ccircle cx='24' cy='48' r='3' fill='%23FFF'/%3E%3C/svg%3E");  /* original wax-print style tile: plum ground, hibiscus and marigold medallions, teal diamonds */
+  --ankara:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%2313110D'/%3E%3Cpath d='M0 0h12L0 12zM48 0v12L36 0zM0 48V36l12 12zM48 48H36l12-12z' fill='%235C502F'/%3E%3Ccircle cx='24' cy='24' r='16' fill='%2394783E'/%3E%3Ccircle cx='24' cy='24' r='11' fill='%23D9BB74'/%3E%3Ccircle cx='24' cy='24' r='6' fill='%2313110D'/%3E%3Ccircle cx='24' cy='24' r='2.2' fill='%23FFF'/%3E%3Ccircle cx='0' cy='24' r='3' fill='%23D9BB74'/%3E%3Ccircle cx='48' cy='24' r='3' fill='%23D9BB74'/%3E%3Ccircle cx='24' cy='0' r='3' fill='%23FFF'/%3E%3Ccircle cx='24' cy='48' r='3' fill='%23FFF'/%3E%3C/svg%3E");  /* original wax-print style tile: plum ground, hibiscus and marigold medallions, teal diamonds */
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -173,12 +179,44 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .slot{padding:10px}
   section{padding-block:48px}
 }
+
+/* Refinement: an expressive textile journal, with room to breathe. */
+body{margin:0} section[id],.collection[id]{scroll-margin-top:125px}
+.skip{position:fixed;left:16px;top:-100px;z-index:30;background:var(--ink);color:var(--bg);padding:12px 20px}.skip:focus{top:16px}
+.wrap{max-width:1200px}.nav{padding-block:20px}.logo{font-size:2rem;letter-spacing:-.06em}
+.hero{padding-block:88px 80px}.hero-grid{grid-template-columns:1.12fr 1fr;gap:64px}.hero h1{font-size:clamp(3rem,6.2vw,5.25rem);letter-spacing:-.045em;line-height:1.08;margin-top:18px}.hero h1 em{font-style:italic}.hero .tag{font-size:1.65rem;margin-top:22px}.hero p.lede{font-size:1.03rem;max-width:32em}.eyebrow{color:var(--muted);font-size:.7rem;letter-spacing:.18em}.btn{font-size:.88rem;padding:13px 20px}.btn.ghost{border-color:var(--line);color:var(--ink)}
+.hero-art{position:relative;min-height:490px;isolation:isolate}.fabric-panel{position:absolute;border:1px solid var(--line);box-shadow:0 15px 35px #00000040}.fabric-one{inset:0 10% 15% 0;background:var(--ankara) center/72px 72px;transform:rotate(-6deg)}.fabric-two{inset:20% 0 0 25%;background:repeating-linear-gradient(90deg,#71603d 0 2px,#b6a078 2px 9px);transform:rotate(7deg)}.fabric-three{inset:8% 6% 9% 9%;background:var(--panel);transform:rotate(1deg);outline:1px dashed var(--accent);outline-offset:-13px}
+.art-label{position:absolute;inset:21% 11% auto 16%;text-align:center;transform:rotate(1deg)}.art-label>p{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.9rem);line-height:1.35;letter-spacing:-.03em;margin:18px 0}.art-label em{color:var(--accent)}.art-label .hand{font-size:1.45rem}.sewn-label{position:absolute;bottom:1%;left:3%;font-size:.58rem;letter-spacing:.15em;padding:12px 18px;background:var(--card);border:1px dashed var(--muted);transform:rotate(-5deg)}
+.manifesto{text-align:center;padding-block:70px;background:var(--panel)}.manifesto .wrap{max-width:800px}.manifesto h2{font-size:clamp(2rem,4vw,3.3rem);margin:18px 0 22px;letter-spacing:-.035em}.manifesto p:not(.eyebrow){max-width:580px;margin:auto;color:var(--muted)}.manifesto .hand{display:block;font-size:1.8rem;margin-top:20px}
+section{padding-block:80px}.sec-head h2,.story-text h2{letter-spacing:-.035em}.sec-head{margin-bottom:32px}.collection{padding-top:26px;border-top:1px solid var(--line)}.collection-preview{display:grid;grid-template-columns:160px 1fr;align-items:center;gap:28px;padding:22px;background:var(--panel);border-radius:4px}.preview-textile{height:150px;background:var(--ankara) center/60px 60px;border-radius:2px}.collection:nth-of-type(even) .preview-textile{background:repeating-linear-gradient(45deg,#302a20 0 12px,#57482e 12px 14px)}.collection-preview .hand{font-size:1.8rem;line-height:1.25;margin-bottom:8px}.collection-preview p:not(.hand){font-size:.85rem;color:var(--muted)}.collection-preview a{display:inline-block;font-size:.85rem;font-weight:600;margin-top:14px;text-underline-offset:5px}.band .collection-preview{background:var(--card)}.story{gap:70px}.story-text{gap:22px}.story-text p{color:var(--muted)}.story-text p.hand{color:var(--accent)}.box{padding:30px}.socials a{flex-wrap:wrap}.socials a span{font-size:.85rem}.ankara-band.thick{height:12px;background-size:36px 36px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-art{width:min(100%,460px);min-height:450px;justify-self:center}.hero{padding-block:55px}.hero h1{font-size:clamp(3rem,9vw,5rem)}.story{gap:36px}}
+@media(max-width:520px){.nav{gap:12px;padding-block:13px}.nav ul{gap:7px 16px}.nav ul a{font-size:.8rem}.nav .logo{font-size:1.8rem}.hero-art{min-height:370px;width:92%}.art-label>p{font-size:2.1rem}.art-label .hand{font-size:1.2rem}.collection-preview{grid-template-columns:85px 1fr;gap:18px;padding:16px}.preview-textile{height:130px}.collection-preview .hand{font-size:1.5rem}section{padding-block:52px}.swatch{grid-template-columns:80px 1fr}.btns{gap:10px}.btn{width:100%;text-align:center}}
+
+
+/* Brand palette matched to the supplied 3Fluxe YouTube reference. */
+:root,:root[data-theme="dark"],:root[data-theme="light"]{
+ --bg:#100F0C;--panel:#1C1913;--ink:#F4EEDD;--muted:#C4BAA6;
+ --accent:#DDC17E;--accent-ink:#17130B;--gold:#DDC17E;--line:#51452D;--card:#17150F;
+ color-scheme:dark;
+}
+.logo{color:var(--accent);font-style:italic}.logo span{color:var(--accent)}
+header{background:var(--bg)}.hero{background:radial-gradient(ellipse at 82% 42%,#b18b3820,transparent 55%)}
+.eyebrow{color:var(--accent)}.fabric-three{background:linear-gradient(145deg,#252014,#15130F)}
+.fabric-two{background:repeating-linear-gradient(90deg,#71603d 0 2px,#b6a078 2px 9px)}
+.art-label>p{color:var(--ink)}.manifesto{background:linear-gradient(110deg,#18150F,#272012,#18150F);border-block:1px solid var(--line)}
+.btn.solid{box-shadow:0 4px 24px #ddc17e16}.btn.solid:hover{background:#EDD59B;border-color:#EDD59B}.btn.ghost:hover{border-color:var(--accent)}
+.sewn-label{color:var(--accent)}.sheet{color-scheme:light}.sheet .sh-title b{color:#8B671F;-webkit-text-stroke:0}
+::selection{background:var(--accent);color:var(--bg)}
+
 </style>
 
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
 <header>
   <div class="ankara-band" role="presentation"></div>
   <div class="wrap nav">
-    <a class="logo" href="#top">3F<span>luxe</span></a>
+    <a class="logo" href="#top" aria-label="3Fluxe home">3F<span>luxe</span></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#shop">Shop</a></li>
@@ -196,36 +234,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Handmade in Limerick, Ireland</p>
-        <h1>Wigs, caps and fashion, <em>made by hand.</em></h1>
-        <p class="hand tag">Stitching my story in fabric</p>
-        <p class="lede">Every 3Fluxe piece is handmade from pre-loved clothes rescued from Irish charity shops, fabric that might otherwise end up in landfill. I cut it, reshape it, and finish it with a touch of African Ankara print, so every piece carries a little of my roots.</p>
+        <h1>Wear what makes<br>you feel <em>like you.</em></h1>
+        <p class="hand tag">Stitching my story in fabric.</p>
+        <p class="lede">For me, fashion is therapy. A way to slow down, express myself, and find joy in creating. From my sewing table in Limerick, I make wigs, caps, accessories and upcycled fashion—with care, colour, and a little of my African roots.</p>
         <div class="btns">
-          <a class="btn solid" href="#shop">Shop the collection</a>
-          <a class="btn ghost" href="#patterns">Get free patterns</a>
+          <a class="btn solid" href="#shop">Explore the collection <span aria-hidden="true">↗</span></a>
+          <a class="btn ghost" href="#story">The story behind the stitches</a>
         </div>
       </div>
-      <div class="tagcard" aria-label="About every 3Fluxe piece">
-        <div class="tag-fabric" role="presentation"></div>
-        <span class="hand">Every piece</span>
-        <dl>
-          <dt>Made</dt><dd>By hand, one at a time</dd>
-          <dt>Fabric</dt><dd>Rescued from Irish charity shops</dd>
-          <dt>Accent</dt><dd>African Ankara print</dd>
-          <dt>Range</dt><dd>Wigs, caps, accessories, clothing</dd>
-          <dt>From</dt><dd>Limerick, Ireland</dd>
-        </dl>
+      <div class="hero-art" aria-label="Decorative textile collage with an original geometric pattern">
+        <div class="fabric-panel fabric-one" aria-hidden="true"></div>
+        <div class="fabric-panel fabric-two" aria-hidden="true"></div>
+        <div class="fabric-panel fabric-three" aria-hidden="true"></div>
+        <div class="art-label"><span class="eyebrow">The 3Fluxe feeling</span><p>A little colour.<br>A little courage.<br><em>A little more you.</em></p><span class="hand">Made with heart, in Limerick</span></div>
+        <span class="sewn-label">PRE-LOVED. REIMAGINED.</span>
       </div>
     </div>
   </div>
 
   <div class="ankara-band thick" role="presentation"></div>
 
+  <section class="manifesto" aria-labelledby="feeling-title">
+    <div class="wrap"><p class="eyebrow">More than what we wear</p><h2 id="feeling-title">“For me, fashion is therapy.”</h2><p>There is joy in making something with your hands. In giving old fabric a fresh beginning. In choosing a colour simply because it makes you smile. That feeling is the heart of 3Fluxe.</p><span class="hand">Stitching my story in fabric</span></div>
+  </section>
   <section id="shop">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">The shop</p>
-        <h2>Shop the collection</h2>
-        <p>New pieces are being photographed now. Check back soon, or follow @3fluxe to see each one first.</p>
+        <h2>Find a little of yourself here.</h2>
+        <p>The collection is taking shape, one piece at a time. Explore what’s on the sewing table, and follow @3fluxe for the first look when pieces become available.</p>
       </div>
       <nav class="cats" aria-label="Shop categories">
         <a href="#wigs">Wigs</a>
@@ -239,13 +276,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <h3>Handmade wigs</h3>
           <p>Wig units built by hand for a comfortable, natural fit.</p>
         </div>
-        <div class="grid">
-          <!-- PRODUCT SLOT: replace with photo, name, price and Stripe link -->
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Wig</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Wig</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Wig</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Wig</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-        </div>
+        <div class="collection-preview"><div class="preview-textile" aria-hidden="true"></div><div><p class="hand">Wigs, made with care</p><p>In the making · Collection coming soon</p><a href="#contact">Follow the making <span aria-hidden="true">↗</span></a></div></div>
       </div>
 
       <div class="collection" id="caps">
@@ -253,12 +284,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <h3>Caps &amp; bonnets</h3>
           <p>Wig caps and satin-lined bonnets to protect your hair, many in bold Ankara prints.</p>
         </div>
-        <div class="grid">
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Cap</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Cap</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Bonnet</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Bonnet</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-        </div>
+        <div class="collection-preview"><div class="preview-textile" aria-hidden="true"></div><div><p class="hand">Everyday comfort, personal style</p><p>In the making · Collection coming soon</p><a href="#contact">Follow the making <span aria-hidden="true">↗</span></a></div></div>
       </div>
 
       <div class="collection" id="fashion">
@@ -266,12 +292,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <h3>Upcycled fashion</h3>
           <p>Clothing remade from pre-loved fabric and denim from charity shops across Ireland, finished with Ankara print details.</p>
         </div>
-        <div class="grid">
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Clothing</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Clothing</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Denim</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Denim</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-        </div>
+        <div class="collection-preview"><div class="preview-textile" aria-hidden="true"></div><div><p class="hand">Old fabric. A fresh beginning.</p><p>In the making · Collection coming soon</p><a href="#contact">Follow the making <span aria-hidden="true">↗</span></a></div></div>
       </div>
     </div>
   </section>
@@ -280,26 +301,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Accessories</p>
-        <h2>Accessories</h2>
-        <p>Small handmade pieces sewn from offcuts and leftover Ankara, so nothing goes to waste.</p>
+        <h2>Little details. Lovely feelings.</h2>
+        <p>Small handmade pieces sewn from offcuts and leftover Ankara, giving leftover fabric another chance to shine.</p>
       </div>
       <div class="collection">
         <div class="collection-head"><h3>Bags &amp; pouches</h3></div>
-        <div class="grid">
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Bag</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Bag</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Pouch</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Pouch</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-        </div>
+        <div class="collection-preview"><div class="preview-textile" aria-hidden="true"></div><div><p class="hand">Small pieces, plenty of personality</p><p>In the making · Collection coming soon</p><a href="#contact">Follow the making <span aria-hidden="true">↗</span></a></div></div>
       </div>
       <div class="collection">
         <div class="collection-head"><h3>Hair accessories &amp; more</h3></div>
-        <div class="grid">
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Headband</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Scrunchie</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Scarf</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-          <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Accessory</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
-        </div>
+        <div class="collection-preview"><div class="preview-textile" aria-hidden="true"></div><div><p class="hand">A little colour for your everyday</p><p>In the making · Collection coming soon</p><a href="#contact">Follow the making <span aria-hidden="true">↗</span></a></div></div>
       </div>
     </div>
   </section>
@@ -352,16 +363,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap story">
       <div class="story-text">
         <p class="eyebrow">Our story</p>
-        <h2>Pre-loved fabric, new life</h2>
-        <p>3Fluxe began at my sewing table in Limerick. I'm a self-taught sewer, and I believe good fabric deserves a second chance.</p>
-        <p>I buy clothes from charity shops across Ireland, take them apart, and stitch them into new pieces. Old jeans become bags. Worn dresses become caps and accessories. Every purchase gives fabric a second life instead of a place in landfill, and supports the charities I buy from.</p>
+        <h2>A second life for fabric.<br>A little space for me.</h2>
+        <p>3Fluxe began at my sewing table in Limerick. I’m self-taught, and making is my way of slowing down and expressing what words sometimes can’t. For me, fashion is therapy: time to create, experiment, and feel like myself.</p>
+        <p>I buy clothes from charity shops across Ireland, take them apart, and stitch them into new pieces. Old jeans become bags. Worn dresses become caps and accessories. Giving these fabrics a second life is part of the joy. Buying from charity shops also supports the charities behind them.</p>
         <p>Then I add Ankara, the bold wax-print fabric I grew up around. A panel, a trim, a lining. It's how I bring my African roots into everything I make here in Ireland.</p>
         <p class="hand" style="font-size:1.8rem">Stitching my story in fabric</p>
       </div>
       <div class="story-side">
       <div class="swatch">
         <div class="cloth" role="img" aria-label="Ankara print swatch"></div>
-        <div><span class="hand">A touch of home</span><p>Ankara print in hibiscus, marigold and teal: the signature finish on 3Fluxe pieces.</p></div>
+        <div><span class="hand">A touch of home</span><p>Bold pattern, a connection to my African roots, and a personal touch in every piece.</p></div>
       </div>
       <ol class="steps" aria-label="How each piece is made">
         <li><div><strong>Found</strong><span>Pre-loved clothes chosen from Irish charity shops.</span></div></li>
@@ -388,8 +399,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <div class="box">
         <p class="eyebrow">Contact</p>
-        <h3>Follow the making</h3>
-        <p>Watch new pieces come together and be first to know when they're for sale.</p>
+        <h3>Come as you are. Follow what’s next.</h3>
+        <p>A glimpse of the process, a little inspiration, and new beginnings in fabric. Follow along as the collection grows.</p>
         <div class="socials">
           <a href="https://www.youtube.com/@3fluxe" target="_blank" rel="noopener">YouTube <span>3F Luxe — Stitching My Story</span></a>
           <a href="https://www.tiktok.com/@3fluxe" target="_blank" rel="noopener">TikTok <span>@3fluxe</span></a>
@@ -407,3 +418,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <span>Part of the 3F family</span>
   </div>
 </footer>
+
+</body>
+</html>
