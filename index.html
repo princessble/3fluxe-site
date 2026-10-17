@@ -1,11 +1,11 @@
 <title>3Fluxe Shop</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="3Fluxe: handmade wigs, caps, accessories and upcycled fashion, made in Limerick from pre-loved Irish charity shop finds.">
+<meta name="description" content="3Fluxe: handmade wigs, caps, accessories and upcycled fashion, made in Limerick from pre-loved Irish charity shop fabric, finished with African Ankara print.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap">
 <style>
-/* Layout: a sewing table. Sections are fabric panels joined by dashed stitch lines; empty product slots are pinned pattern pieces waiting for photos. */
+/* Layout: a sewing table. Sections are fabric panels joined by strips of Ankara print; empty product slots are pinned pattern pieces waiting for photos. */
 :root{
   --bg:#FFF7FA;          /* soft hibiscus white */
   --panel:#FCE4EF;       /* brand blush */
@@ -20,6 +20,7 @@
   --font-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-hand:"Caveat", "Segoe Print", "Bradley Hand", cursive;
   --stitch:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 18px);
+  --ankara:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%233A1730'/%3E%3Cpath d='M0 0h12L0 12zM48 0v12L36 0zM0 48V36l12 12zM48 48H36l12-12z' fill='%230F8B8D'/%3E%3Ccircle cx='24' cy='24' r='16' fill='%23E0218A'/%3E%3Ccircle cx='24' cy='24' r='11' fill='%23F5B21B'/%3E%3Ccircle cx='24' cy='24' r='6' fill='%233A1730'/%3E%3Ccircle cx='24' cy='24' r='2.2' fill='%23FFF'/%3E%3Ccircle cx='0' cy='24' r='3' fill='%23F5B21B'/%3E%3Ccircle cx='48' cy='24' r='3' fill='%23F5B21B'/%3E%3Ccircle cx='24' cy='0' r='3' fill='%23FFF'/%3E%3Ccircle cx='24' cy='48' r='3' fill='%23FFF'/%3E%3C/svg%3E");  /* original wax-print style tile: plum ground, hibiscus and marigold medallions, teal diamonds */
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -53,6 +54,8 @@ p{margin:0}
 .hand{font-family:var(--font-hand);color:var(--accent);font-weight:700}
 .eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold)}
 .stitch{height:2px;background:var(--stitch);opacity:.7}
+.ankara-band{height:16px;background:var(--ankara) left center/32px 32px repeat-x}
+.ankara-band.thick{height:28px;background-size:28px 28px}
 
 /* Header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
@@ -77,7 +80,9 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var
 .btn.ghost{color:var(--accent)}
 @media (prefers-reduced-motion: reduce){.btn{transition:none}.btn:hover{transform:none}}
 .tagcard{background:var(--panel);border-radius:6px;padding:28px 24px;position:relative;border:2px dashed var(--accent)}
-.tagcard::before{content:"";position:absolute;top:14px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tagcard::before{content:"";position:absolute;top:21px;z-index:1;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tag-fabric{margin:-28px -24px 18px;height:56px;background:var(--ankara) center/42px 42px;border-radius:4px 4px 0 0}
+.tagcard{overflow:hidden}
 .tagcard dl{margin:22px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.95rem}
 .tagcard dt{font-weight:600;color:var(--gold);text-transform:uppercase;font-size:.75rem;letter-spacing:.1em;padding-top:3px}
 .tagcard dd{margin:0}
@@ -130,6 +135,11 @@ section{padding-block:64px}
 .story{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .story-text{display:flex;flex-direction:column;gap:16px;max-width:36em}
 .story-text h2{font-size:clamp(1.9rem,4vw,2.6rem)}
+.story-side{display:flex;flex-direction:column;gap:20px;min-width:0}
+.swatch{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px}
+.swatch .cloth{aspect-ratio:1;max-width:100%;border-radius:4px;background:var(--ankara) center/40px 40px;box-shadow:inset 0 0 0 3px var(--card),0 0 0 2px var(--accent)}
+.swatch p{color:var(--muted);font-size:.95rem}
+.swatch .hand{font-size:1.5rem;display:block;line-height:1.1;margin-bottom:4px}
 .steps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0;counter-reset:s}
 .steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding-block:16px;border-bottom:2px dashed var(--line);counter-increment:s}
 .steps li:last-child{border-bottom:0}
@@ -166,6 +176,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
 
 <header>
+  <div class="ankara-band" role="presentation"></div>
   <div class="wrap nav">
     <a class="logo" href="#top">3F<span>luxe</span></a>
     <nav aria-label="Main">
@@ -187,17 +198,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="eyebrow">Handmade in Limerick, Ireland</p>
         <h1>Wigs, caps and fashion, <em>made by hand.</em></h1>
         <p class="hand tag">Stitching my story in fabric</p>
-        <p class="lede">Every 3Fluxe piece is handmade. Our clothes and accessories start life as pre-loved fabric from Irish charity shops, cut and sewn into something new.</p>
+        <p class="lede">Every 3Fluxe piece is handmade from pre-loved clothes rescued from Irish charity shops, fabric that might otherwise end up in landfill. I cut it, reshape it, and finish it with a touch of African Ankara print, so every piece carries a little of my roots.</p>
         <div class="btns">
           <a class="btn solid" href="#shop">Shop the collection</a>
           <a class="btn ghost" href="#patterns">Get free patterns</a>
         </div>
       </div>
       <div class="tagcard" aria-label="About every 3Fluxe piece">
+        <div class="tag-fabric" role="presentation"></div>
         <span class="hand">Every piece</span>
         <dl>
           <dt>Made</dt><dd>By hand, one at a time</dd>
           <dt>Fabric</dt><dd>Rescued from Irish charity shops</dd>
+          <dt>Accent</dt><dd>African Ankara print</dd>
           <dt>Range</dt><dd>Wigs, caps, accessories, clothing</dd>
           <dt>From</dt><dd>Limerick, Ireland</dd>
         </dl>
@@ -205,7 +218,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="stitch" role="presentation"></div>
+  <div class="ankara-band thick" role="presentation"></div>
 
   <section id="shop">
     <div class="wrap">
@@ -238,7 +251,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="collection" id="caps">
         <div class="collection-head">
           <h3>Caps &amp; bonnets</h3>
-          <p>Wig caps and satin-lined bonnets to protect your hair.</p>
+          <p>Wig caps and satin-lined bonnets to protect your hair, many in bold Ankara prints.</p>
         </div>
         <div class="grid">
           <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Cap</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
@@ -251,7 +264,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="collection" id="fashion">
         <div class="collection-head">
           <h3>Upcycled fashion</h3>
-          <p>Clothing remade from pre-loved fabric and denim, sourced from charity shops across Ireland.</p>
+          <p>Clothing remade from pre-loved fabric and denim from charity shops across Ireland, finished with Ankara print details.</p>
         </div>
         <div class="grid">
           <article class="slot"><div class="photo"><div><span class="hand">Photo coming</span>Clothing</div></div><p class="name">Product name</p><div class="meta"><span>Size</span><span>€ —</span></div><button class="buy" type="button" disabled>Coming soon</button></article>
@@ -268,7 +281,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="sec-head">
         <p class="eyebrow">Accessories</p>
         <h2>Accessories</h2>
-        <p>Small handmade pieces made from leftover fabric, so nothing goes to waste.</p>
+        <p>Small handmade pieces sewn from offcuts and leftover Ankara, so nothing goes to waste.</p>
       </div>
       <div class="collection">
         <div class="collection-head"><h3>Bags &amp; pouches</h3></div>
@@ -341,15 +354,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="eyebrow">Our story</p>
         <h2>Pre-loved fabric, new life</h2>
         <p>3Fluxe began at my sewing table in Limerick. I'm a self-taught sewer, and I believe good fabric deserves a second chance.</p>
-        <p>I buy clothes from charity shops across Ireland, take them apart, and stitch them into new pieces. Old jeans become bags. Worn dresses become caps and accessories. Your purchase keeps fabric out of landfill and supports the charities I buy from.</p>
+        <p>I buy clothes from charity shops across Ireland, take them apart, and stitch them into new pieces. Old jeans become bags. Worn dresses become caps and accessories. Every purchase gives fabric a second life instead of a place in landfill, and supports the charities I buy from.</p>
+        <p>Then I add Ankara, the bold wax-print fabric I grew up around. A panel, a trim, a lining. It's how I bring my African roots into everything I make here in Ireland.</p>
         <p class="hand" style="font-size:1.8rem">Stitching my story in fabric</p>
+      </div>
+      <div class="story-side">
+      <div class="swatch">
+        <div class="cloth" role="img" aria-label="Ankara print swatch"></div>
+        <div><span class="hand">A touch of home</span><p>Ankara print in hibiscus, marigold and teal: the signature finish on 3Fluxe pieces.</p></div>
       </div>
       <ol class="steps" aria-label="How each piece is made">
         <li><div><strong>Found</strong><span>Pre-loved clothes chosen from Irish charity shops.</span></div></li>
         <li><div><strong>Washed &amp; unpicked</strong><span>Each garment is cleaned and taken apart by hand.</span></div></li>
         <li><div><strong>Cut &amp; stitched</strong><span>The fabric is cut into a new design and sewn piece by piece.</span></div></li>
-        <li><div><strong>Yours</strong><span>Finished, checked and posted from Limerick.</span></div></li>
+        <li><div><strong>Finished with Ankara</strong><span>A panel, trim or lining of African wax print makes it 3Fluxe.</span></div></li>
+        <li><div><strong>Yours</strong><span>Checked and posted from Limerick.</span></div></li>
       </ol>
+      </div>
     </div>
   </section>
 
@@ -379,6 +400,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
 </main>
 
+<div class="ankara-band thick" role="presentation"></div>
 <footer>
   <div class="wrap">
     <span>© 2026 3Fluxe · Handmade in Limerick, Ireland</span>
